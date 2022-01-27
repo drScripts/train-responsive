@@ -1,0 +1,297 @@
+@use "small-mobile" as sm;
+@use "large-apps" as lg;
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+
+$primaryColor: #315bc7;
+$backgroundColor: #f3f5fc;
+$darkBackground: #0a1329;
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: $backgroundColor;
+}
+
+.btn {
+  padding: 16px 32px;
+  color: white;
+  font-weight: 500;
+}
+
+.btn-flat {
+  @extend .btn;
+  color: $primaryColor;
+}
+
+.btn-primary {
+  @extend .btn;
+  background-color: $primaryColor;
+  color: white;
+  border-radius: 39px;
+}
+
+.navbar {
+  margin-bottom: 138px;
+
+  .navbar-brand {
+    font-size: 18px;
+
+    img {
+      margin-right: 16px;
+    }
+  }
+
+  .navbar-collapse {
+    .navbar-nav {
+      .nav-item {
+        margin: 0px 16px;
+      }
+    }
+  }
+}
+
+.hero {
+  padding-bottom: 170px;
+  .banner {
+    .badge {
+      padding: 8px 16px;
+      font-weight: 500;
+      font-size: 16px;
+      background-color: #ffebee;
+      color: rgba(244, 67, 54, 0.55);
+      i {
+        color: #ff3053;
+        margin-right: 16px;
+        transform: rotate(75deg);
+      }
+    }
+  }
+
+  .title {
+    font-size: 66px;
+    font-weight: bold;
+    margin-bottom: 26px;
+  }
+
+  .description {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(10, 19, 41, 0.55);
+    margin-bottom: 52px;
+  }
+
+  .hero-image {
+    width: 120%;
+  }
+}
+
+.features {
+  color: white;
+  .feature {
+    height: 500px;
+    text-align: center;
+    padding-top: 131px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .title {
+      font-weight: bold;
+      font-size: 49px;
+    }
+
+    .description {
+      font-weight: 400;
+      font-size: 20px;
+    }
+  }
+
+  .ultra-high {
+    @extend .feature;
+    background-image: url("../img/ultra-high.png");
+  }
+
+  .best-resolution {
+    @extend .feature;
+    background-image: url("../img/best-resolution.png");
+  }
+}
+
+.about-product {
+  padding: 101px 0 0 0;
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .description {
+      margin: 32px 0 80px 0;
+      width: 500px;
+    }
+  }
+
+  .benefits {
+    .benefit {
+      .title {
+        font-size: 36px;
+      }
+    }
+  }
+
+  .cut-img {
+    text-align: center;
+    margin-bottom: -200px;
+    img {
+      width: 368px;
+      height: 376px;
+    }
+  }
+}
+
+.demo {
+  background-color: white;
+  padding: 300px 0 120px 0;
+
+  .demo-video {
+    width: 100%;
+    height: 558px;
+    background-image: url("../img/video-demo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+  }
+}
+
+.new-products {
+  background-color: white;
+  padding: 52px 0 146px 0;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .products {
+    display: flex;
+    overflow: auto;
+    padding-bottom: 30px;
+    gap: 30px;
+    .product-card {
+      min-width: 300px;
+      max-width: 340px;
+      border: 1px solid lightgrey;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+
+      .img-card {
+        img {
+          width: 100%;
+          height: 150px;
+          border-radius: 20px;
+        }
+      }
+
+      .title-card {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .price-card {
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      .description-card {
+        font-weight: 200;
+        font-size: 17px;
+      }
+
+      .btn {
+        font-size: 18px;
+        padding: 16px 45px;
+      }
+
+      &:first-child {
+        margin-left: 135px;
+      }
+
+      &:last-child {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+.testimonis {
+  padding: 115px 0;
+
+  .title {
+    font-size: 4em;
+    font-weight: bold;
+    line-height: 104px;
+  }
+
+  .card-testimoni {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+
+    .users-about {
+      display: flex;
+      margin-top: 30px;
+      align-items: center;
+
+      .picture {
+        margin-right: 30px;
+        img {
+          width: 70px;
+        }
+      }
+
+      .about {
+        .name {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  padding: 110px 0 120px 0;
+  color: white;
+  background-color: $darkBackground;
+
+  .title {
+    font-weight: bold;
+    font-size: 26px;
+    img {
+      width: 68px;
+      height: 32px;
+    }
+  }
+
+  .social {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}
+
+@include sm.smallMobile();
+@include lg.largeApps();

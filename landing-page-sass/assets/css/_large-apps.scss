@@ -1,0 +1,15 @@
+@mixin largeApps() {
+  @media screen and (min-width: 992px) and (max-width: 1200px) {
+    .navbar {
+      margin-bottom: 100px;
+
+      .navbar-collapse {
+        .navbar-nav {
+          .nav-item {
+            margin: 0px 8px;
+          }
+        }
+      }
+    }
+  }
+}
